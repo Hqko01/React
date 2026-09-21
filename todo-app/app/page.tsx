@@ -1,69 +1,23 @@
 import Image from "next/image";
 
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="form flex flex-col items-center justify-center gap-5 position-relative w-lg max-w-lg h-screen rounded-lg shadow-md p-4 pt-10 pb-10">
+      <div className="flex gap-5 input w-[90%] h-max items-center justify-center">
+        <input className="flex-1 border border-[#1b1b1b] bg-[#ffffff05] outline-none color-black placeholder:text-gray-500 p-2 rounded-lg" type="text" placeholder="Add a new task" />
+        <button className="w-20 h-full bg-[#748cab] outline-none border-none rounded-lg hover:bg-[#324052] active:bg-[#435266] transition-all duration-200 cursor-pointer">Add</button>
+      </div>
+      <div className="output flex flex-col gap-5 flex-1 w-full bg-[#ffffff05] rounded-lg p-5 overflow-y-auto scrollbar-thin scrollbar-thumb-[#748cab] scrollbar-track-[#ffffff05]">
+        <div className="todo flex gap-5 flex-row w-full bg-[#ffffff10] p-2 pl-4 pr-4 rounded-lg items-center justify-between">
+          <div className="content flex-1">
+            <p className="text-white">Build a todo app</p>
+          </div>
+          <div className="check w-8.5 h-8.5 border border-[#6f6f6f] rounded-lg cursor-pointer hover:bg-[#ffffff10] active:bg-[#ffffff1e] transition-all duration-200 flex items-center justify-center" >
+            <div className="tick border-b-2 border-r-2 rotate-45 w-2.5 h-5"></div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </div >
   );
 }
