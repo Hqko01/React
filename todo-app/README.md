@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Next.js & React Todo App
 
-## Getting Started
+React ve Next.js öğrenme sürecimde geliştirdiğim, modern web standartlarına ve immutability (değişmezlik) prensiplerine uygun olarak tasarlanmış dinamik bir **Todo (Görev Yönetimi)** uygulaması.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Öne Çıkan Özellikler
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* ➕ **Görev Ekleme:** Kullanıcı girdilerine göre benzersiz kimliklerle (ID) yeni görevler oluşturma.
+* ⚡ **Client-Side Rendering:** React `useState` hook'u ile anlık sayfa güncellemeleri ve re-render optimizasyonu.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Kullanılan Teknolojiler
 
-## Learn More
+* **Framework:** Next.js (App Router)
+* **Kütüphane:** React
+* **Dil:** JavaScript (ES6+) / JSX
+* **Stil:** Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Öğrenilen Temel React Kavramları
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Uygulama geliştirme sürecinde özellikle şu temel konulara odaklanılmıştır:
 
-## Deploy on Vercel
+1. **`useState` Hook'u:** State tanımlama ve state güncelleme fonksiyonlarının destructing (`[todos, setTodos]`) yapısıyla kullanımı.
+2. **Immutability (Değişmezlik):** State üzerindeki dizileri doğrudan değiştirmek (`push`, `splice`) yerine Spread Operator (`...`), `.map()` ve `.filter()` metotları ile yeni referanslar oluşturma.
+3. **Array içinde Object Yapısı:** Görevleri `{ id, text, completed }` formatında tutarak güvenli veri yönetimi sağlama.
+4. **Key Prop Kullanımı:** `.map()` döngülerinde her bileşene benzersiz `key` atayarak React render performansını koruma.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Kurulum ve Çalıştırma
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+
+1. Repository'yi klonlayın:
+   ```bash
+   git clone [https://github.com/Hqko01/React/tree/main/todo-app](https://github.com/Hqko01/React/tree/main/todo-app)
