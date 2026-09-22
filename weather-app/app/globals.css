@@ -20,7 +20,13 @@
 }
 
 body {
-  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../public/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
