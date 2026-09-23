@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌤️ Next.js Weather Card App
 
-## Getting Started
+Next.js (App Router), React ve Tailwind CSS kullanılarak geliştirilmiş; kullanıcının anlık konumuna veya aratılan şehre göre hava sıcaklığı, lokasyon, tarih ve dinamik durum ikonu gösteren modern bir **Hava Durumu Kartı** uygulaması.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Öne Çıkan Özellikler
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* 📍 **Otomatik Konum Algılama:** Tarayıcının `navigator.geolocation` API'si ile kullanıcının enlem/boylam bilgilerini alarak hava durumunu otomatik getirme.
+* 🌡️ **Detaylı Hava Bilgisi:** Sıcaklık (°C), lokasyon (şehir/ülke), anlık tarih ve hava durumu (bulutlu, güneşli, yağmurlu vb.) gösterimi.
+* 🎨 **Dinamik İkonlar:** OpenWeather API'den gelen veriye göre değişen hava durumu durum ikonları.
+* ⚠️ **Hata ve İzin Yönetimi:** Konum izni verilmediğinde veya şehir bulunamadığında kullanıcıya gösterilen özel durum kartı (Error Boundary).
+* ⚡ **Next.js App Router & Client Components:** `'use client'` direktifi ile etkileşimli state ve lifecycle (`useEffect`) yönetimi.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Teknolojiler
 
-## Learn More
+* **Framework:** Next.js (App Router)
+* **Kütüphane:** React (`useState`, `useEffect`)
+* **Stil:** Tailwind CSS
+* **API:** OpenWeather Current Weather API
+* **Dil:** TypeScript / JavaScript (JSX)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Öğrenilen Temel Kavramlar & Deneyimler
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Bu proje sürecinde odaklanılan ve uygulanan temel web geliştirme pratikleri:
 
-## Deploy on Vercel
+1. **`process.env` ve Güvenlik:** React Client Component'larda çevre değişkenlerine erişmek için `NEXT_PUBLIC_` ön eki kullanımının önemi.
+2. **`fetch` ile Asenkron Veri Çekme:** `async/await` yapısı ile API isteklerini yönetme, `loading` ve `error` durumlarını state üzerinde tutma.
+3. **Geolocation API:** Tarayıcı üzerinden enlem ve boylam alıp bu koordinatları OpenWeather `lat/lon` endpoint'ine iletme.
+4. **JSX Sözdizimi Kuralları:** Ternary operator (`? :`) kullanırken birden fazla elemanı **React Fragment (`<>...</>`)** ile sarmalama gereksinimi.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 Kurulum ve Çalıştırma
+
+Projeyi kendi yerel ortamınızda çalıştırmak için aşağıdaki adımları uygulayabilirsiniz:
+
+1. Repository'yi klonlayın:
+   ```bash
+   git clone [https://github.com/Hqko01/React/tree/main/weather-app](https://github.com/Hqko01/React/tree/main/weather-app)
